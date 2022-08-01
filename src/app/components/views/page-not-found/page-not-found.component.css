@@ -1,0 +1,11 @@
+*{
+    color: white;
+    text-align: center;
+}
+
+.nfound{
+    width: 100%;
+    height: 100%;
+    background-image: url('https://sitechecker.pro/wp-content/uploads/2017/12/404.png');
+    background-size: cover;
+}

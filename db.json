@@ -1,0 +1,100 @@
+{
+  "dbcategorias": [
+    {
+      "nome": "Moletom",
+      "descricao": "Moletom canguru",
+      "id": 1
+    },
+    {
+      "nome": "Camiseta",
+      "descricao": "",
+      "id": 2
+    }
+  ],
+  "estoque": [
+    {
+      "categoria_id": -1,
+      "produto_id": -1,
+      "partes": [
+        {
+          "Frente": 0,
+          "Costa": 0
+        }
+      ]
+    }
+  ],
+  "dbprodutos": [
+    {
+      "id": 0,
+      "categoria_id": 0,
+      "categoria": "",
+      "variacoes": [],
+      "nome": "Moletom vermelho",
+      "descricao": "Moletom Canguru Liso",
+      "custo": 0,
+      "valor": 0
+    },
+    {
+      "id": 1,
+      "categoria_id": -1,
+      "variacoes": [
+        {
+          "id": 0,
+          "Nome": "Corola"
+        }
+      ],
+      "categoria": "",
+      "nome": "",
+      "descricao": "",
+      "custo": 0,
+      "valor": 0
+    },
+    {
+      "id": 2,
+      "categoria_id": 0,
+      "categoria": "",
+      "variacoes": [],
+      "nome": "Moletom vermelho",
+      "descricao": "Moletom Canguru Liso",
+      "custo": 0,
+      "valor": 0
+    },
+    {
+      "categoria_id": 1,
+      "variacoes": [
+        {
+          "id": 0,
+          "Nome": "Vermelho"
+        }
+      ],
+      "partes": [
+        {
+          "id": 0,
+          "Nome": "Frente"
+        },
+        {
+          "id": 1,
+          "Nome": "Costa"
+        }
+      ],
+      "categoria": "Moletom",
+      "nome": "teste",
+      "descricao": "s",
+      "custo": 0,
+      "valor": 0,
+      "id": 3
+    }
+  ],
+  "dbvendas": [
+    {
+      "id": 0,
+      "data": "20/07/2022",
+      "produto_id": 0,
+      "categoria_id": "",
+      "quantidade": 1,
+      "custo": 0,
+      "valor": 0,
+      "lucro": 0
+    }
+  ]
+}
