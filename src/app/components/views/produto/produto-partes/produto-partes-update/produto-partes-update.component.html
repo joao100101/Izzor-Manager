@@ -1,0 +1,16 @@
+<form>
+    <h1>ATUALIZANDO PEÇA</h1>
+    <mat-form-field class="form">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="parte.Nome" type="text" name="nome" required minlength="3" autocomplete="off" placeholder="Ex. Computação"/>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click)='update()' mat-raised-button class="mat-elevation-z8 atualizar-categoria botao">
+            ATUALIZAR
+        </button>
+        <button (click)="voltar()" mat-raised-button class="mat-elevation-z8 cancelar botao">
+            CANCELAR
+        </button>
+    </div>
+</form>

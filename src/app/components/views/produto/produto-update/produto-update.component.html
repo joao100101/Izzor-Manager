@@ -1,0 +1,30 @@
+<form>
+    <h1>ATUALIZANDO PRODUTO</h1>
+    <mat-form-field class="form">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="produto.nome" type="text" name="nome" required minlength="3" autocomplete="off" placeholder="Ex. Computação"/>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Descrição</mat-label>
+        <textarea matInput [(ngModel)]="produto.descricao" type="text" name="descricao" autocomplete="off" class="descricao"
+            placeholder="Ex. Livros de Computação"></textarea>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Custo</mat-label>
+        <input matInput [(ngModel)]="produto.custo" type="number" name="custo" autocomplete="off"/>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Valor</mat-label>
+        <input matInput [(ngModel)]="produto.valor" type="number" name="valor" autocomplete="off"/>
+    </mat-form-field>
+    
+
+    <div class="buttons">
+        <button (click)='update()' mat-raised-button class="mat-elevation-z8 atualizar-categoria botao">
+            ATUALIZAR
+        </button>
+        <button (click)="voltar()" mat-raised-button class="mat-elevation-z8 cancelar botao">
+            CANCELAR
+        </button>
+    </div>
+</form>

@@ -1,0 +1,32 @@
+<form>
+  <h1>ADICIONANDO PRODUTO</h1>
+  <mat-form-field class="form">
+    <mat-label>Nome</mat-label>
+    <input matInput [(ngModel)]="produto.nome" type="text" name="nome" autocomplete="off" placeholder="Ex. Moletom Canguru" />
+  </mat-form-field>
+  <mat-form-field class="form">
+    <mat-label>Descrição</mat-label>
+    <textarea matInput [(ngModel)]="produto.descricao" type="text" name="descricao" autocomplete="off" class="descricao"
+      placeholder="Ex. Moletom Canguru Vermelho"></textarea>
+  </mat-form-field>
+  <mat-form-field class="form num">
+    <mat-label>Custo de Produção (R$)</mat-label>
+    <input matInput [(ngModel)]="produto.custo" type="number" name="custo" step=0.01 />
+  </mat-form-field>
+  <mat-form-field class="form num">
+    <mat-label>Valor de Venda (R$)</mat-label>
+    <input matInput [(ngModel)]="produto.valor" type="number" name="valor" step=0.01 />
+  </mat-form-field>
+
+
+  <div class="buttons">
+    <button matTooltip="Adicionar Produto" matTooltipPosition="below" mat-raised-button color="primary"
+      class="mat-elevation-z8 criar-categoria botao" (click)="create()">
+      CONFIRMAR
+    </button>
+    <button matTooltip="Voltar" matTooltipPosition="below" mat-raised-button color="warn"
+      class="mat-elevation-z8 cancelar botao" routerLink="/categorias">
+      CANCELAR
+    </button>
+  </div>
+</form>
