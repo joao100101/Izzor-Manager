@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DateAdapter, NativeDateAdapter } from '@angular/material/core';
 import { MateriaPrima } from '../materia-prima.model';
-import {endOfTomorrow, parse} from 'date-fns'
 
 @Component({
   selector: 'app-materia-prima-add',
@@ -12,7 +12,7 @@ export class MateriaPrimaAddComponent implements OnInit {
   material: MateriaPrima = {
     lote: '',
     descricao: '',
-    entrada: parse(this.data.toString(), 'dd,MM,yyyy', new Date()),
+    entrada: new Date(),
     quantidade: 0,
     custo: 0
   }
