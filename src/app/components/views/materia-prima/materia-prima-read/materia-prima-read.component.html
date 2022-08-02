@@ -1,9 +1,12 @@
 <div class="content">
     <div class="title">
-      <h1>ESTOQUE DE MATERIA PRIMA</h1>
+      <h1>ESTOQUE</h1>
     </div>
-    <button matTooltip="Criar Categoria" matTooltipPosition="below" routerLink="/estoque/add" mat-raised-button color="primary" class="mat-elevation-z8 criar-categoria botao">
+    <button matTooltip="Adicionar ao estoque" matTooltipPosition="below" routerLink="/estoque/add" mat-raised-button color="primary" class="mat-elevation-z8 add-estoque botao">
       ENTRADA ESTOQUE
+    </button>
+    <button matTooltip="Adicionar categoria" matTooltipPosition="below" routerLink="/estoque/add" mat-raised-button color="primary" class="mat-elevation-z8 criar-categoria botao">
+      CRIAR CATEGORIA
     </button>
     <div class="mat-elevation-z8 content-table">
       <table class="table" mat-table [dataSource]="estoque">

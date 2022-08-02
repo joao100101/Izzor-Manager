@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { DateAdapter, NativeDateAdapter } from '@angular/material/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { MateriaPrima } from '../materia-prima.model';
+import { MateriaPrimaService } from '../materia-prima.service';
 
 @Component({
   selector: 'app-materia-prima-add',
@@ -8,7 +9,8 @@ import { MateriaPrima } from '../materia-prima.model';
   styleUrls: ['./materia-prima-add.component.css']
 })
 export class MateriaPrimaAddComponent implements OnInit {
-  data: String =''
+  @ViewChild('custo') custo: any;
+  data: String = ''
   material: MateriaPrima = {
     lote: '',
     descricao: '',
@@ -16,16 +18,20 @@ export class MateriaPrimaAddComponent implements OnInit {
     quantidade: 0,
     custo: 0
   }
-  constructor() { }
+  constructor(private router: Router, private service: MateriaPrimaService) { }
 
   ngOnInit(): void {
   }
 
-  voltar(){
+  voltar() {
+    this.router.navigate(['estoque'])
   }
 
-  create(){
+  create() {
+  }
 
+  clear() {
+    this.custo.nativeElement.value = '';
   }
 
 }

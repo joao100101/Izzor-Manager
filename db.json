@@ -13,14 +13,8 @@
   ],
   "estoque": [
     {
-      "categoria_id": -1,
-      "produto_id": -1,
-      "partes": [
-        {
-          "Frente": 0,
-          "Costa": 0
-        }
-      ]
+      "categorias": [],
+      "estocados": []
     }
   ],
   "dbprodutos": [

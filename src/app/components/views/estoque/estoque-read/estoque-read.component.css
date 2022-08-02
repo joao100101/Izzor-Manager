@@ -14,15 +14,10 @@
     font-weight: 500;
 }
 
-.add-estoque{
-    margin-bottom: .5rem;
-    background-color: blue;
-}
 
 .criar-categoria{
     margin-bottom: .5rem;
     background-color: blue;
-    float: right;
 }
 
 .table{

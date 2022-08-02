@@ -24,6 +24,7 @@
     "got": "^12.3.0",
     "json-server": "^0.17.0",
     "luxon": "^3.0.1",
+    "ng2-currency-mask": "^13.0.3",
     "radium": "^0.26.2",
     "rxjs": "~7.5.0",
     "terser": "^5.14.2",

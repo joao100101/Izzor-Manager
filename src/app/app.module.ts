@@ -27,7 +27,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-
+import { CurrencyMaskModule } from "ng2-currency-mask";
 
 
 
@@ -54,6 +54,7 @@ import { VendasAddComponent } from './components/views/venda/vendas-add/vendas-a
 import { MateriaPrimaReadComponent } from './components/views/materia-prima/materia-prima-read/materia-prima-read.component';
 import { MateriaPrimaAddComponent } from './components/views/materia-prima/materia-prima-add/materia-prima-add.component';
 import { MateriaPrimaUpdateComponent } from './components/views/materia-prima/materia-prima-update/materia-prima-update.component';
+import { EstoqueReadComponent } from './components/views/estoque/estoque-read/estoque-read.component';
 
 
 
@@ -82,7 +83,8 @@ import { MateriaPrimaUpdateComponent } from './components/views/materia-prima/ma
     VendasAddComponent,
     MateriaPrimaReadComponent,
     MateriaPrimaAddComponent,
-    MateriaPrimaUpdateComponent
+    MateriaPrimaUpdateComponent,
+    EstoqueReadComponent
   ],
   imports: [
     BrowserModule,
@@ -107,7 +109,8 @@ import { MateriaPrimaUpdateComponent } from './components/views/materia-prima/ma
     MatSelectModule,
     MatExpansionModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    CurrencyMaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]

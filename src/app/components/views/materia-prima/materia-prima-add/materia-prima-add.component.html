@@ -3,25 +3,31 @@
     <mat-form-field class="form">
         <mat-label>Lote</mat-label>
         <input matInput [(ngModel)]="material.lote" type="text" autocomplete="off" name="lote" minlength="4"
-            placeholder="Ex. ZBA214" />
+            placeholder="Ex. ZBA214" required />
     </mat-form-field>
     <mat-form-field class="form">
         <mat-label>Descrição</mat-label>
         <textarea matInput [(ngModel)]="material.descricao" type="text" autocomplete="off" name="descricao"
-            class="descricao" placeholder="Ex. Linha"></textarea>
+            class="descricao" placeholder="Ex. Linha" required></textarea>
     </mat-form-field>
 
     <mat-form-field class="form">
-        <mat-label>Entrada</mat-label>
-        <input matInput [matDatepicker]="datepicker">
-        <mat-hint>DD/MM/YYYY</mat-hint>
-        <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
-        <mat-datepicker #datepicker>
-            <mat-datepicker-actions>
-                <button mat-button matDatepickerCancel>Cancelar</button>
-                <button mat-raised-button color="primary" matDatepickerApply>Aplicar</button>
-            </mat-datepicker-actions>
-        </mat-datepicker>
+        <mat-label>Data de entrada</mat-label>
+        <input matInput [(ngModel)]="material.entrada" type="date" name="entrada" class="descricao" required />
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Quantidade</mat-label>
+        <input matInput [(ngModel)]="material.quantidade" type="number" autocomplete="off" min=0 name="qtd"
+            placeholder="22" required />
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Preço Unitário</mat-label>
+        <input matInput currencyMask [(ngModel)]="material.custo"
+            [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', align: 'left', allowNegative: false }"
+            class="currency" name="custo" #custo autocomplete="off" required />
+        <i class="material-icons limpar" matTooltip="Limpar" (click)="clear()">backspace</i>
     </mat-form-field>
 
     <div class="buttons">
