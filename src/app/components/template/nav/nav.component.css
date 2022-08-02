@@ -18,3 +18,8 @@ i{
     box-sizing: border-box;
     overflow: hidden;
 }
+
+.sair{
+    position: absolute;
+    bottom: 1rem;
+}

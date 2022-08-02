@@ -1,0 +1,37 @@
+<form>
+    <h1>ADICIONANDO AO ESTOQUE</h1>
+    <mat-form-field class="form">
+        <mat-label>Lote</mat-label>
+        <input matInput [(ngModel)]="material.lote" type="text" autocomplete="off" name="lote" minlength="4"
+            placeholder="Ex. ZBA214" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Descrição</mat-label>
+        <textarea matInput [(ngModel)]="material.descricao" type="text" autocomplete="off" name="descricao"
+            class="descricao" placeholder="Ex. Linha"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Entrada</mat-label>
+        <input matInput [matDatepicker]="datepicker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+        <mat-datepicker #datepicker>
+            <mat-datepicker-actions>
+                <button mat-button matDatepickerCancel>Cancel</button>
+                <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+            </mat-datepicker-actions>
+        </mat-datepicker>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button matTooltip="Criar categoria" matTooltipPosition="below" mat-raised-button color="primary"
+            class="mat-elevation-z8 criar-categoria botao" (click)="create()">
+            CRIAR
+        </button>
+        <button matTooltip="Voltar" matTooltipPosition="below" mat-raised-button color="warn"
+            class="mat-elevation-z8 cancelar botao" (click)="voltar()">
+            CANCELAR
+        </button>
+    </div>
+</form>

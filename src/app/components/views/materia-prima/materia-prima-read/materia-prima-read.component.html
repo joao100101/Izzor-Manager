@@ -1,0 +1,65 @@
+<div class="content">
+    <div class="title">
+      <h1>ESTOQUE DE MATERIA PRIMA</h1>
+    </div>
+    <button matTooltip="Criar Categoria" matTooltipPosition="below" routerLink="/estoque/add" mat-raised-button color="primary" class="mat-elevation-z8 criar-categoria botao">
+      ENTRADA ESTOQUE
+    </button>
+    <div class="mat-elevation-z8 content-table">
+      <table class="table" mat-table [dataSource]="estoque">
+        <ng-container matColumnDef="lote">
+          <th mat-header-cell *matHeaderCellDef>LOTE</th>
+          <td mat-cell *matCellDef="let row">{{ row.lote }}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="descricao">
+          <th mat-header-cell *matHeaderCellDef>DESCRIÇÃO</th>
+          <td mat-cell *matCellDef="let row">{{ row.descricao }}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="entrada">
+          <th mat-header-cell *matHeaderCellDef>ENTRADA</th>
+          <td mat-cell *matCellDef="let row">{{ row.entrada }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="quantidade">
+            <th mat-header-cell *matHeaderCellDef>QUANTIDADE</th>
+            <td mat-cell *matCellDef="let row">{{ row.quantidade }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="custo_un">
+            <th mat-header-cell *matHeaderCellDef>CUSTO UNITÁRIO</th>
+            <td mat-cell *matCellDef="let row">{{ row.custo_un }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="custo_total">
+            <th mat-header-cell *matHeaderCellDef>CUSTO TOTAL</th>
+            <td mat-cell *matCellDef="let row">{{ row.custo_total }}</td>
+          </ng-container>
+  
+        
+  
+        <ng-container matColumnDef="acoes">
+          <th class="mat-header" mat-header-cell *matHeaderCellDef>AÇÕES</th>
+          <td mat-cell *matCellDef="let row">
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item routerLink="update/{{row.id}}">
+                <mat-icon>edit</mat-icon>
+                <span>Editar</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>delete</mat-icon>
+                <span>Remover</span>
+              </button>
+            </mat-menu>
+          </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+  </div>

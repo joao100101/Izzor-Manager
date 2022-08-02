@@ -25,6 +25,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 
 
@@ -49,6 +50,9 @@ import { ProdutoPartesReadComponent } from './components/views/produto/produto-p
 import { ProdutoPartesCreateComponent } from './components/views/produto/produto-partes/produto-partes-create/produto-partes-create.component';
 import { ProdutoPartesUpdateComponent } from './components/views/produto/produto-partes/produto-partes-update/produto-partes-update.component';
 import { VendasAddComponent } from './components/views/venda/vendas-add/vendas-add.component';
+import { MateriaPrimaReadComponent } from './components/views/materia-prima/materia-prima-read/materia-prima-read.component';
+import { MateriaPrimaAddComponent } from './components/views/materia-prima/materia-prima-add/materia-prima-add.component';
+import { MateriaPrimaUpdateComponent } from './components/views/materia-prima/materia-prima-update/materia-prima-update.component';
 
 
 
@@ -74,7 +78,10 @@ import { VendasAddComponent } from './components/views/venda/vendas-add/vendas-a
     ProdutoPartesReadComponent,
     ProdutoPartesCreateComponent,
     ProdutoPartesUpdateComponent,
-    VendasAddComponent
+    VendasAddComponent,
+    MateriaPrimaReadComponent,
+    MateriaPrimaAddComponent,
+    MateriaPrimaUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -97,7 +104,8 @@ import { VendasAddComponent } from './components/views/venda/vendas-add/vendas-a
     MatSortModule,
     MatMenuModule,
     MatSelectModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

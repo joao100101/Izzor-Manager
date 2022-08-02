@@ -4,6 +4,8 @@ import { CategoriaCreateComponent } from './components/views/categoria/categoria
 import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component';
 import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
 import { HomeComponent } from './components/views/home/home.component';
+import { MateriaPrimaAddComponent } from './components/views/materia-prima/materia-prima-add/materia-prima-add.component';
+import { MateriaPrimaReadComponent } from './components/views/materia-prima/materia-prima-read/materia-prima-read.component';
 import { PageNotFoundComponent } from './components/views/page-not-found/page-not-found.component';
 import { ProdutoCreateComponent } from './components/views/produto/produto-create/produto-create.component';
 import { ProdutoPartesCreateComponent } from './components/views/produto/produto-partes/produto-partes-create/produto-partes-create.component';
@@ -34,7 +36,7 @@ const routes: Routes = [
     component: CategoriaUpdateComponent
   },
   {
-    path:'categorias/:id/produtos',
+    path: 'categorias/:id/produtos',
     component: ProdutoReadComponent
   },
   {
@@ -72,6 +74,14 @@ const routes: Routes = [
   {
     path: 'vendas/create',
     component: VendasAddComponent
+  },
+  {
+    path: 'estoque',
+    component: MateriaPrimaReadComponent
+  },
+  {
+    path: 'estoque/add',
+    component: MateriaPrimaAddComponent
   },
   {
     path: '**',
