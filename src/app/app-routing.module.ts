@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component';
 import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component';
 import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
+import { EstoqueCreateComponent } from './components/views/estoque/estoque-create/estoque-create.component';
 import { EstoqueReadComponent } from './components/views/estoque/estoque-read/estoque-read.component';
 import { HomeComponent } from './components/views/home/home.component';
 import { MateriaPrimaAddComponent } from './components/views/materia-prima/materia-prima-add/materia-prima-add.component';
@@ -81,8 +82,12 @@ const routes: Routes = [
     component: EstoqueReadComponent
   },
   {
-    path: 'estoque/add',
+    path: 'estoque/categorias/:id/add',
     component: MateriaPrimaAddComponent
+  },
+  {
+    path: 'estoque/categorias/create',
+    component: EstoqueCreateComponent
   },
   {
     path: '**',

@@ -1,4 +1,5 @@
 export interface CategoriaEstoque{
-    id?: Number,
-    nome: String
+    id?: String,
+    nome: String,
+    descricao: String
 }

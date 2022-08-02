@@ -11,10 +11,22 @@
       "id": 2
     }
   ],
+  "estocados": [],
   "estoque": [
     {
-      "categorias": [],
-      "estocados": []
+      "id": 0,
+      "nome": "teste",
+      "descricao": "teste"
+    },
+    {
+      "id": 1,
+      "nome": "qewer",
+      "descricao": "qwerty"
+    },
+    {
+      "id": 2,
+      "nome": "Angular",
+      "descricao": "Material\n"
     }
   ],
   "dbprodutos": [

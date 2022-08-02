@@ -28,7 +28,7 @@ export class EstoqueService {
   }
 
   findAll(): Observable<CategoriaEstoque[]> {
-    const url = `${this.baseURL}/estoque/categorias`
+    const url = `${this.baseURL}/estoque`
     return this.http.get<CategoriaEstoque[]>(url);
   }
   findByID(id: String): Observable<CategoriaEstoque> {

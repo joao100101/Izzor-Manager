@@ -55,6 +55,7 @@ import { MateriaPrimaReadComponent } from './components/views/materia-prima/mate
 import { MateriaPrimaAddComponent } from './components/views/materia-prima/materia-prima-add/materia-prima-add.component';
 import { MateriaPrimaUpdateComponent } from './components/views/materia-prima/materia-prima-update/materia-prima-update.component';
 import { EstoqueReadComponent } from './components/views/estoque/estoque-read/estoque-read.component';
+import { EstoqueCreateComponent } from './components/views/estoque/estoque-create/estoque-create.component';
 
 
 
@@ -84,7 +85,8 @@ import { EstoqueReadComponent } from './components/views/estoque/estoque-read/es
     MateriaPrimaReadComponent,
     MateriaPrimaAddComponent,
     MateriaPrimaUpdateComponent,
-    EstoqueReadComponent
+    EstoqueReadComponent,
+    EstoqueCreateComponent
   ],
   imports: [
     BrowserModule,
