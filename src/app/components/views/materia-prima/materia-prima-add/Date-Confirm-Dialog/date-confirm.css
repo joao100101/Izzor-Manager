@@ -1,0 +1,27 @@
+*{
+    text-align: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+h1{
+    font-weight: bold;
+    letter-spacing: .1rem;
+}
+
+.confirma{
+    width: 12rem;
+    margin: .8rem;
+}
+
+.botao{
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(0, 0, 255);
+    height: 2rem;
+}
+.botao:hover{
+    cursor: pointer;
+    background-color: rgb(0, 0, 255, 0.700);
+}

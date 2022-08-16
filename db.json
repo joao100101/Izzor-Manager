@@ -11,22 +11,103 @@
       "id": 2
     }
   ],
-  "estocados": [],
+  "estocados": [
+    {
+      "lote": "",
+      "descricao": "",
+      "entrada": "2022-08-07T20:59:50.106Z",
+      "quantidade": 0,
+      "custo": 0,
+      "id": 1
+    },
+    {
+      "lote": "12312",
+      "descricao": "21321",
+      "entrada": "2022-08-07",
+      "quantidade": 12,
+      "custo": 0.12,
+      "id": 2
+    },
+    {
+      "lote": "",
+      "descricao": "",
+      "entrada": "2022-08-07T21:04:45.629Z",
+      "quantidade": 0,
+      "custo": 0,
+      "id": 3
+    },
+    {
+      "lote": "12312312",
+      "descricao": "213123",
+      "entrada": "2022-08-07T21:04:45.629Z",
+      "quantidade": 0,
+      "custo": 0,
+      "id": 4
+    },
+    {
+      "lote": "12312312",
+      "descricao": "213123",
+      "entrada": "2022-08-07T21:04:45.629Z",
+      "quantidade": 2,
+      "custo": 2.22,
+      "id": 5
+    },
+    {
+      "lote": "",
+      "categoria_id": "",
+      "descricao": "",
+      "entrada": "2022-08-07T21:09:48.512Z",
+      "quantidade": 0,
+      "custo": 0,
+      "id": 6
+    },
+    {
+      "lote": "",
+      "categoria_id": "",
+      "descricao": "",
+      "entrada": "2022-08-07T21:11:29.338Z",
+      "quantidade": 0,
+      "custo": 0,
+      "id": 7
+    },
+    {
+      "lote": "",
+      "categoria_id": "",
+      "descricao": "",
+      "entrada": "2022-08-07T21:12:30.702Z",
+      "quantidade": 0,
+      "custo": 0,
+      "id": 8
+    },
+    {
+      "lote": "",
+      "categoria_id": "0",
+      "descricao": "",
+      "entrada": "2022-08-07T21:13:18.891Z",
+      "quantidade": 0,
+      "custo": 0,
+      "id": 9
+    },
+    {
+      "lote": "zbasas",
+      "categoria_id": "0",
+      "descricao": "teste",
+      "entrada": "2022-08-07",
+      "quantidade": 2,
+      "custo": 1.99,
+      "id": 10
+    }
+  ],
   "estoque": [
     {
       "id": 0,
       "nome": "teste",
-      "descricao": "teste"
+      "descricao": "Arnaldo"
     },
     {
       "id": 1,
       "nome": "qewer",
       "descricao": "qwerty"
-    },
-    {
-      "id": 2,
-      "nome": "Angular",
-      "descricao": "Material\n"
     }
   ],
   "dbprodutos": [

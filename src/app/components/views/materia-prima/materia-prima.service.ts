@@ -11,10 +11,27 @@ export class MateriaPrimaService {
   baseUrl: String = environment.baseUrl;
   constructor(private http: HttpClient) { }
 
-
-  addMaterial(mat: MateriaPrima): Observable<MateriaPrima>{
-    let url = `${this.baseUrl}/estoque`
+  readAll(cat_id: String): Observable<MateriaPrima[]> {
+    const url = `${this.baseUrl}/estocados?categoria_id=${cat_id}`
+    return this.http.get<MateriaPrima[]>(url);
+  }
+  read(id: String): Observable<MateriaPrima> {
+    const url = `${this.baseUrl}/estocados/${id}`;
+    return this.http.get<MateriaPrima>(url);
+  }
+  create(mat: MateriaPrima): Observable<MateriaPrima> {
+    const url = `${this.baseUrl}/estocados`
     return this.http.post<MateriaPrima>(url, mat);
+  }
+
+  remove(id: String): Observable<void> {
+    const url = `${this.baseUrl}/estocados/${id}`
+    return this.http.delete<void>(url);
+  }
+
+  update(mat: MateriaPrima): Observable<MateriaPrima> {
+    const url = `${this.baseUrl}/estocados/${mat.id}`
+    return this.http.put<MateriaPrima>(url, mat);
   }
 }
 

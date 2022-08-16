@@ -56,7 +56,15 @@ import { MateriaPrimaAddComponent } from './components/views/materia-prima/mater
 import { MateriaPrimaUpdateComponent } from './components/views/materia-prima/materia-prima-update/materia-prima-update.component';
 import { EstoqueReadComponent } from './components/views/estoque/estoque-read/estoque-read.component';
 import { EstoqueCreateComponent } from './components/views/estoque/estoque-create/estoque-create.component';
-
+import { EstoqueUpdateComponent } from './components/views/estoque/estoque-update/estoque-update.component';
+import { CategoriaRoutingModule } from './components/views/categoria/categoria.routing.module';
+import { MateriaPrimaRoutingModule } from './components/views/materia-prima/materiaprima.routing.module';
+import { EstoqueRoutingModule } from './components/views/estoque/estoque.routing.module';
+import { ProdutoRoutingModule } from './components/views/produto/produto.routing.module';
+import { VendasRoutingModule } from './components/views/venda/vendas.routing.module';
+import { AccountCreateComponent } from './components/views/account/account-create/account-create.component';
+import { LoginComponent } from './components/views/account/login/login.component';
+import { RecoveryComponent } from './components/views/account/recovery/recovery.component';
 
 
 @NgModule({
@@ -86,7 +94,11 @@ import { EstoqueCreateComponent } from './components/views/estoque/estoque-creat
     MateriaPrimaAddComponent,
     MateriaPrimaUpdateComponent,
     EstoqueReadComponent,
-    EstoqueCreateComponent
+    EstoqueCreateComponent,
+    EstoqueUpdateComponent,
+    AccountCreateComponent,
+    LoginComponent,
+    RecoveryComponent
   ],
   imports: [
     BrowserModule,
@@ -112,7 +124,12 @@ import { EstoqueCreateComponent } from './components/views/estoque/estoque-creat
     MatExpansionModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    CurrencyMaskModule
+    CurrencyMaskModule,
+    CategoriaRoutingModule,
+    MateriaPrimaRoutingModule,
+    EstoqueRoutingModule,
+    ProdutoRoutingModule,
+    VendasRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

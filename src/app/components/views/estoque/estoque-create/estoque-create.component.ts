@@ -23,10 +23,14 @@ export class EstoqueCreateComponent implements OnInit {
   }
 
   create() {
-    this.service.criar(this.estoque).subscribe(() => {
-      mensagem('Categoria criada com sucesso.', Class.OK, this._snack);
-      this.router.navigate(['/estoque']);
-    })
+    if (this.estoque.nome.length >= 3) {
+      this.service.criar(this.estoque).subscribe(() => {
+        mensagem('Categoria criada com sucesso.', Class.OK, this._snack);
+        this.router.navigate(['/estoque']);
+      })
+    } else {
+      mensagem('Verifique se o nome da categoria é válido.', Class.AVISO, this._snack);
+    }
   }
 
 }

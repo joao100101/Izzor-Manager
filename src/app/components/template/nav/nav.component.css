@@ -1,25 +1,26 @@
-
-.container{
+.container {
     background-color: gray;
     color: black;
     height: 85%;
 }
-.lista{
-    background-color:  rgb(36, 33, 30);;
+
+.lista  {
+    background-color: rgb(36, 33, 30);;
     overflow: hidden;
     height: 100%;
-    
+    color: gray;
 }
 
-i{
+i {
     padding-right: .6rem;
 }
-*{
+
+* {
     box-sizing: border-box;
     overflow: hidden;
 }
 
-.sair{
+.sair {
     position: absolute;
     bottom: 1rem;
 }
