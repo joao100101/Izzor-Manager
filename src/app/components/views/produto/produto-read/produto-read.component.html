@@ -1,0 +1,80 @@
+<div class="content">
+  <div class="title">
+    <h1>PRODUTOS</h1>
+  </div>
+  <button matTooltip="CADASTRAR PRODUTO" matTooltipPosition="below" (click)="goToProdutoCreate()" mat-raised-button
+    color="primary" class="mat-elevation-z8 criar-categoria botao">
+    CADASTRAR PRODUTO
+  </button>
+  <button matTooltip="VOLTAR" matTooltipPosition="below" routerLink="/categorias" mat-raised-button color="primary"
+    class="mat-elevation-z8 voltar botao">
+    VOLTAR
+  </button>
+  <div class="mat-elevation-z8 content-table">
+    <table class="table" mat-table [dataSource]="produtos">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef class="make-white">ID</th>
+        <td mat-cell *matCellDef="let row" class="make-white">{{ row.id }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="categoria">
+        <th mat-header-cell *matHeaderCellDef class="make-white">CATEGORIA</th>
+        <td mat-cell *matCellDef="let row" class="make-white">{{ row.categoria }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef class="make-white">NOME</th>
+        <td mat-cell *matCellDef="let row" class="make-white">{{ row.nome }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="descricao">
+        <th mat-header-cell *matHeaderCellDef class="make-white">DESCRIÇÃO</th>
+        <td mat-cell *matCellDef="let row" class="make-white">{{ row.descricao }}</td>
+      </ng-container>
+
+      <div class="custovalor">
+        <ng-container matColumnDef="custo">
+          <th mat-header-cell *matHeaderCellDef class="make-white">CUSTO</th>
+          <td mat-cell *matCellDef="let row" class="make-white">R$ {{ row.custo }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="valor">
+          <th mat-header-cell *matHeaderCellDef class="make-white">VALOR</th>
+          <td mat-cell *matCellDef="let row" class="make-white">R$ {{ row.valor }}</td>
+        </ng-container>
+      </div>
+
+      <ng-container matColumnDef="acoes">
+        <th class="mat-header make-white" mat-header-cell *matHeaderCellDef>AÇÕES</th>
+        <td mat-cell *matCellDef="let row">
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon class="make-white">more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="{{row.id}}/variacoes">
+              <mat-icon>workspaces</mat-icon>
+              <span>Variações</span>
+            </button>
+            <button mat-menu-item routerLink="{{row.id}}/partes">
+              <mat-icon>architecture</mat-icon>
+              <span>Partes</span>
+            </button>
+            <button mat-menu-item routerLink="produtos/update/{{row.id}}">
+              <mat-icon>edit</mat-icon>
+              <span>Editar</span>
+            </button>
+            <button mat-menu-item (click)="deleteProduto(row.id)">
+              <mat-icon>delete</mat-icon>
+              <span>Remover</span>
+            </button>
+
+
+          </mat-menu>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>

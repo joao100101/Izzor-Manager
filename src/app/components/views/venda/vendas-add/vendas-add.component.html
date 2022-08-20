@@ -1,0 +1,79 @@
+<form>
+  <h1>CADASTRANDO VENDA</h1>
+  <mat-form-field class="form">
+    <mat-label>Nome</mat-label>
+    <input matInput type="text" autocomplete="off" name="nome" minlength="4" placeholder="Ex. Calça Jeans" />
+  </mat-form-field>
+  <mat-form-field class="form">
+    <mat-label>Descrição</mat-label>
+    <textarea matInput type="text" autocomplete="off" name="descricao" class="descricao"
+      placeholder="Ex. Calça Jeans Masculina"></textarea>
+  </mat-form-field>
+
+  
+  <mat-form-field class="form">
+    <mat-select placeholder="Categoria" #clientValue (selectionChange)="selecionado($event)">
+      <mat-option *ngFor="let i of categorias" [value]="i.id">
+        {{i.nome}}
+      </mat-option>
+      <mat-option>Limpar</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="form">
+    <mat-select placeholder="Produto" #clientValue (selectionChange)="prodSelecionado($event)">
+      <mat-option *ngFor="let i of produtos" [value]="i.id" >
+        {{i.nome}}
+      </mat-option>
+      <mat-option>Limpar</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div class="adicionais">
+    <mat-accordion class="custos-adicionais" multi>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Custos adicionais
+          </mat-panel-title>
+          <mat-panel-description>
+            Adicione os custos que sairam do padrão
+            <mat-icon>paid</mat-icon>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="conteudo">
+          <button mat-raised-button class="botao add">+</button>
+          <mat-form-field class="form test">
+            <mat-label>Valor</mat-label>
+            <input matInput type="text" autocomplete="off" name="valor" minlength="4" placeholder="Ex. R$ 50,00" />
+          </mat-form-field>
+          <mat-form-field class="form test">
+            <mat-label>Descrição</mat-label>
+            <input matInput type="text" autocomplete="off" name="desc" minlength="4"
+              placeholder="Ex. Serviço Terceirizado" />
+          </mat-form-field>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="lista">
+          <mat-list role="list">
+            <mat-list-item role="listitem"><i class="material-icons del">delete</i>&nbsp;Item 1</mat-list-item>
+            <mat-list-item role="listitem"><i class="material-icons del">delete</i>&nbsp;Item 2</mat-list-item>
+            <mat-list-item role="listitem"><i class="material-icons del">delete</i>&nbsp;Item 3</mat-list-item>
+          </mat-list>
+
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+
+
+  <div class="buttons">
+    <button matTooltip="Criar categoria" matTooltipPosition="below" mat-raised-button color="primary"
+      class="mat-elevation-z8 criar-categoria botao" (click)="create()">
+      CRIAR
+    </button>
+    <button matTooltip="Voltar" matTooltipPosition="below" mat-raised-button color="warn"
+      class="mat-elevation-z8 cancelar botao" routerLink="/vendas">
+      CANCELAR
+    </button>
+  </div>
+</form>
