@@ -80,15 +80,6 @@
       "id": 8
     },
     {
-      "lote": "",
-      "categoria_id": "0",
-      "descricao": "",
-      "entrada": "2022-08-07T21:13:18.891Z",
-      "quantidade": 0,
-      "custo": 0,
-      "id": 9
-    },
-    {
       "lote": "zbasas",
       "categoria_id": "0",
       "descricao": "teste",
@@ -96,6 +87,24 @@
       "quantidade": 2,
       "custo": 1.99,
       "id": 10
+    },
+    {
+      "lote": "ZBA114",
+      "categoria_id": "0",
+      "descricao": "Roberto Carlos Meias",
+      "entrada": "2022-08-10",
+      "quantidade": 12,
+      "custo": 2.22,
+      "id": 11
+    },
+    {
+      "lote": "ZBA211",
+      "categoria_id": "0",
+      "descricao": "Roberto Carlos Calças",
+      "entrada": "2022-08-20",
+      "quantidade": 12,
+      "custo": 1.54,
+      "id": 12
     }
   ],
   "estoque": [

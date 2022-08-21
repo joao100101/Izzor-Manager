@@ -49,7 +49,7 @@ import { ProdutoPartesReadComponent } from './components/views/produto/produto-p
 import { ProdutoPartesCreateComponent } from './components/views/produto/produto-partes/produto-partes-create/produto-partes-create.component';
 import { ProdutoPartesUpdateComponent } from './components/views/produto/produto-partes/produto-partes-update/produto-partes-update.component';
 import { VendasAddComponent } from './components/views/venda/vendas-add/vendas-add.component';
-import { MateriaPrimaReadComponent } from './components/views/materia-prima/materia-prima-read/materia-prima-read.component';
+import { MateriaPrimaReadComponent, MateriaPrimaRemoveComponent } from './components/views/materia-prima/materia-prima-read/materia-prima-read.component';
 import { MateriaPrimaAddComponent } from './components/views/materia-prima/materia-prima-add/materia-prima-add.component';
 import { MateriaPrimaUpdateComponent } from './components/views/materia-prima/materia-prima-update/materia-prima-update.component';
 import { EstoqueReadComponent } from './components/views/estoque/estoque-read/estoque-read.component';
@@ -93,7 +93,8 @@ import { AuthService } from './components/views/account/auth.service';
     EstoqueUpdateComponent,
     AccountCreateComponent,
     LoginComponent,
-    RecoveryComponent
+    RecoveryComponent,
+    MateriaPrimaRemoveComponent
   ],
   imports: [
     BrowserModule,

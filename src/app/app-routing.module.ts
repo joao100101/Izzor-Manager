@@ -10,6 +10,7 @@ import { EstoqueUpdateComponent } from './components/views/estoque/estoque-updat
 import { HomeComponent } from './components/views/home/home.component';
 import { MateriaPrimaAddComponent } from './components/views/materia-prima/materia-prima-add/materia-prima-add.component';
 import { MateriaPrimaReadComponent } from './components/views/materia-prima/materia-prima-read/materia-prima-read.component';
+import { MateriaPrimaUpdateComponent } from './components/views/materia-prima/materia-prima-update/materia-prima-update.component';
 import { PageNotFoundComponent } from './components/views/page-not-found/page-not-found.component';
 import { ProdutoCreateComponent } from './components/views/produto/produto-create/produto-create.component';
 import { ProdutoPartesCreateComponent } from './components/views/produto/produto-partes/produto-partes-create/produto-partes-create.component';
@@ -62,6 +63,10 @@ const routes: Routes = [
   {
     path: 'estoque/categorias/:id/materiais/add',
     component: MateriaPrimaAddComponent
+  },
+  {
+    path: 'estoque/categorias/:id/materiais/update/:mpid',
+    component: MateriaPrimaUpdateComponent
   },
   {
     path: 'categorias/:id/produtos',

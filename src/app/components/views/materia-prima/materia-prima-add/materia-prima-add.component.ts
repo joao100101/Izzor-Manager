@@ -37,17 +37,21 @@ export class MateriaPrimaAddComponent implements OnInit {
 
   create(): void {
     this.material.categoria_id = id;
+    if (this.material.lote.length > 3 && this.material.custo >= 0 && this.material.entrada != undefined && this.material.lote.length > 0 && this.material.quantidade > 0) {
       if ((!isToday(this.material.entrada)) && force != true) {
         console.log(isToday(this.material.entrada))
         this.openDialog('1ms', '1ms');
+      } else {
+        this.service.create(this.material).subscribe(res => {
+          mensagem('Material adicionado com sucesso.', Class.OK, this.snack);
+          this.voltar();
+        }, err => {
+          mensagem('Ocorreu um erro ao adicionar o material.', Class.ERRO, this.snack);
+          console.log(err);
+        })
+      }
     } else {
-      this.service.create(this.material).subscribe(res => {
-        mensagem('Material adicionado com sucesso.', Class.OK, this.snack);
-        this.voltar();
-      }, err => {
-        mensagem('Ocorreu um erro ao adicionar o material.', Class.ERRO, this.snack);
-        console.log(err);
-      })
+      mensagem('Verifique se todos os campos estão preenchidos.', Class.ERRO, this.snack);
     }
   }
 
