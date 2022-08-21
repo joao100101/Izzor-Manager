@@ -19,22 +19,22 @@
   
         <ng-container matColumnDef="entrada">
           <th mat-header-cell *matHeaderCellDef class="make-white">ENTRADA</th>
-          <td mat-cell *matCellDef="let row" class="make-white">{{ row.entrada }}</td>
+          <td mat-cell *matCellDef="let row" class="make-white">{{ formatar(row.entrada) }}</td>
         </ng-container>
 
         <ng-container matColumnDef="quantidade">
             <th mat-header-cell *matHeaderCellDef class="make-white">QUANTIDADE</th>
-            <td mat-cell *matCellDef="let row" class="make-white">{{ row.quantidade }}</td>
+            <td mat-cell *matCellDef="let row" class="make-white qtd">{{ row.quantidade }}</td>
           </ng-container>
 
           <ng-container matColumnDef="custo">
             <th mat-header-cell *matHeaderCellDef class="make-white">CUSTO UNITÁRIO</th>
-            <td mat-cell *matCellDef="let row" class="make-white">{{ row.custo }}</td>
+            <td mat-cell *matCellDef="let row" class="make-white custo">{{ row.custo }}</td>
           </ng-container>
 
           <ng-container matColumnDef="custo_total">
             <th mat-header-cell *matHeaderCellDef class="make-white">CUSTO TOTAL</th>
-            <td mat-cell *matCellDef="let row" class="make-white">{{ row.custo * row.quantidade }}</td>
+            <td mat-cell *matCellDef="let row" class="make-white total">{{ row.custo * row.quantidade }}</td>
           </ng-container>
   
         
@@ -46,7 +46,7 @@
               <mat-icon class="make-white">more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu">
-              <button mat-menu-item routerLink="update/{row.id}">
+              <button mat-menu-item routerLink="update/{{row.id}}">
                 <mat-icon>edit</mat-icon>
                 <span>Editar</span>
               </button>

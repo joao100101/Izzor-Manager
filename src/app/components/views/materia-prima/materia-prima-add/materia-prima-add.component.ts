@@ -37,7 +37,7 @@ export class MateriaPrimaAddComponent implements OnInit {
 
   create(): void {
     this.material.categoria_id = id;
-    if (this.material.lote.length > 3 && this.material.custo >= 0 && this.material.entrada != undefined && this.material.lote.length > 0 && this.material.quantidade > 0) {
+    if (this.material.lote.length > 3 && this.material.descricao.length > 3 && this.material.custo >= 0 && this.material.entrada != undefined && this.material.lote.length > 0 && this.material.quantidade > 0) {
       if ((!isToday(this.material.entrada)) && force != true) {
         console.log(isToday(this.material.entrada))
         this.openDialog('1ms', '1ms');

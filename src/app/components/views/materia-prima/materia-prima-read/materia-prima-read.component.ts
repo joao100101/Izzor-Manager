@@ -36,6 +36,11 @@ export class MateriaPrimaReadComponent implements OnInit {
     });
   }
 
+  formatar(data: Date):String{
+    let formatada = data.toString().split('-')[2] + '/' + data.toString().split('-')[1] + '/' + data.toString().split('-')[0];
+    return formatada;
+  }
+
   find() {
     this.service.readAll(catID).subscribe(res => {
       this.estoque = res;

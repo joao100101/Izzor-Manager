@@ -1,5 +1,9 @@
 <form>
-    <h1>ADICIONANDO AO ESTOQUE</h1>
+    <h1>ATUALIZANDO MATERIAL</h1>
+    <mat-form-field class="form">
+        <mat-label>ID</mat-label>
+        <input matInput [(ngModel)]="material.id" type="text" autocomplete="off" name="id" readonly class='readonly'/>
+    </mat-form-field>
     <mat-form-field class="form">
         <mat-label>Lote</mat-label>
         <input matInput [(ngModel)]="material.lote" type="text" autocomplete="off" name="lote" minlength="4"
@@ -33,7 +37,7 @@
     <div class="buttons">
         <button matTooltip="Criar categoria" matTooltipPosition="below" mat-raised-button color="primary"
             class="mat-elevation-z8 criar-categoria botao" (click)="update()">
-            CRIAR
+            CONFIRMAR
         </button>
         <button matTooltip="Voltar" matTooltipPosition="below" mat-raised-button color="warn"
             class="mat-elevation-z8 cancelar botao" (click)="voltar()">
