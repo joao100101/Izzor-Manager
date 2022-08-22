@@ -4,6 +4,7 @@ import { LoginComponent } from './components/views/account/login/login.component
 import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component';
 import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component';
 import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
+import { DashboardComponent } from './components/views/dashboard/dashboard.component';
 import { EstoqueCreateComponent } from './components/views/estoque/estoque-create/estoque-create.component';
 import { EstoqueReadComponent } from './components/views/estoque/estoque-read/estoque-read.component';
 import { EstoqueUpdateComponent } from './components/views/estoque/estoque-update/estoque-update.component';
@@ -107,6 +108,10 @@ const routes: Routes = [
   {
     path: 'vendas/create',
     component: VendasAddComponent
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
   },
   {
     path: '**', pathMatch: 'full',

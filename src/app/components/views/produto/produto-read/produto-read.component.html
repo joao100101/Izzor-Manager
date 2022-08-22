@@ -11,7 +11,7 @@
     VOLTAR
   </button>
   <div class="mat-elevation-z8 content-table">
-    <table class="table" mat-table [dataSource]="produtos">
+    <table class="table" mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef class="make-white">ID</th>
         <td mat-cell *matCellDef="let row" class="make-white">{{ row.id }}</td>
@@ -68,7 +68,7 @@
               <span>Remover</span>
             </button>
 
-
+            
           </mat-menu>
         </td>
       </ng-container>
@@ -76,5 +76,8 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
+    <mat-paginator #paginator [pageSize]="pageSize" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true" [length]="totalSize"
+    [pageIndex]="currentPage" (page)="handlePage($event)">
+</mat-paginator>
   </div>
 </div>

@@ -27,6 +27,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CurrencyMaskModule } from "ng2-currency-mask";
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
@@ -60,6 +61,7 @@ import { LoginComponent } from './components/views/account/login/login.component
 import { RecoveryComponent } from './components/views/account/recovery/recovery.component';
 import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
 import { AuthService } from './components/views/account/auth.service';
+import { DashboardComponent } from './components/views/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -94,7 +96,8 @@ import { AuthService } from './components/views/account/auth.service';
     AccountCreateComponent,
     LoginComponent,
     RecoveryComponent,
-    MateriaPrimaRemoveComponent
+    MateriaPrimaRemoveComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -119,7 +122,8 @@ import { AuthService } from './components/views/account/auth.service';
     MatExpansionModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    CurrencyMaskModule
+    CurrencyMaskModule,
+    MatPaginatorModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

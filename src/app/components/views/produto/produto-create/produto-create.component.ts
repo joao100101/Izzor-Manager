@@ -34,7 +34,7 @@ export class ProdutoCreateComponent implements OnInit {
     if (this.produto.nome.length > 3 && this.produto.custo >= 0 && this.produto.valor >= 0) {
       this.service.create(this.produto).subscribe(() => {
         this.service.mensagem('Produto adicionado com sucesso!', Class.OK)
-        this.route.navigate(['categorias'])
+        this.route.navigate([`categorias/${this.produto.categoria_id}/produtos`])
       }, err => {
         for (let i in err.error.messages) {
           this.service.mensagem(err.error.messages[i].message, Class.ERRO)
@@ -44,8 +44,6 @@ export class ProdutoCreateComponent implements OnInit {
       this.service.mensagem("Verifique todos os campos.", Class.AVISO)
     }
   }
-
-
 
 
 }
