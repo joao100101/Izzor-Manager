@@ -54,5 +54,5 @@ button{
   
   ::ng-deep.mat-form-field-ripple {
     /*Muda cor da linha quando focar no input*/
-   background-color: cornflowerblue !important;
+    background-color: cornflowerblue !important;
   }

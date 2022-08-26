@@ -10,7 +10,7 @@
       placeholder="Ex. Calça Jeans Masculina"></textarea>
   </mat-form-field>
 
-
+  
   <mat-form-field class="form">
     <mat-select placeholder="Categoria" #clientValue (selectionChange)="selecionado($event)">
       <mat-option *ngFor="let i of categorias" [value]="i.id">
@@ -22,7 +22,7 @@
 
   <mat-form-field class="form">
     <mat-select placeholder="Produto" #clientValue (selectionChange)="prodSelecionado($event)">
-      <mat-option *ngFor="let i of produtos" [value]="i.id">
+      <mat-option *ngFor="let i of produtos" [value]="i.id" >
         {{i.nome}}
       </mat-option>
       <mat-option>Limpar</mat-option>

@@ -5,9 +5,9 @@
     float: left;
 }
 mat-toolbar{
+    color: black;
     background-color: white;
     width: 100%;
-    color:black;
 }
 
 .header{

@@ -1,0 +1,93 @@
+form{
+    background-color: rgba(61, 58, 58, 0.582);
+    border-radius: 1.2rem;
+    padding: 3rem;
+    text-align: center;
+    width: 70%;
+    margin: 2rem auto 0 auto;
+    color: white;
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+.form{
+    width: 100%;
+}
+
+.descricao{
+    min-height: 1.5rem;
+    max-height: 5rem;
+}
+
+.buttons {
+    width: 100%;
+    text-align: center;
+}
+
+button{
+    margin-right: .5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+
+    width: 10rem;
+}
+
+.criar-categoria{
+    background-color: blue;
+
+}
+
+
+.cancelar{
+    background-color: blue;
+}
+
+.botao:hover{
+    cursor: pointer;
+    background-color: rgb(0, 0, 255, 0.700);
+}
+
+
+::ng-deep .mat-focused .mat-form-field-label {
+    /*Cor do label*/
+    color: white !important;
+   }
+  
+   ::ng-deep.mat-form-field-underline {
+    /*Mudar cor da linha*/
+    background-color: gray !important;
+  } 
+  
+  ::ng-deep.mat-form-field-ripple {
+    /*Muda cor da linha quando focar no input*/
+   background-color: cornflowerblue !important;
+  }
+
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.currency{
+    text-align: left;
+}
+.limpar{
+    float: right;
+    color: gray;
+    font-size: 1rem;
+}
+
+.limpar:hover{
+    color: white;
+    cursor: pointer;
+}

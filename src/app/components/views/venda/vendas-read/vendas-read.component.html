@@ -9,42 +9,42 @@
     <div class="mat-elevation-z8 content-table">
       <table class="table" mat-table [dataSource]="vendas">
         <ng-container matColumnDef="id">
-          <th mat-header-cell *matHeaderCellDef>ID</th>
-          <td mat-cell *matCellDef="let row">{{ row.id }}</td>
+          <th mat-header-cell *matHeaderCellDef class="make-white">ID</th>
+          <td mat-cell *matCellDef="let row" class="make-white">{{ row.id }}</td>
         </ng-container>
   
         <ng-container matColumnDef="categoria">
-          <th mat-header-cell *matHeaderCellDef>CATEGORIA</th>
-          <td mat-cell *matCellDef="let row">{{ row.categoria }}</td>
+          <th mat-header-cell *matHeaderCellDef class="make-white">CATEGORIA</th>
+          <td mat-cell *matCellDef="let row" class="make-white">{{ row.categoria }}</td>
         </ng-container>
   
         <ng-container matColumnDef="nome">
-          <th mat-header-cell *matHeaderCellDef>NOME</th>
-          <td mat-cell *matCellDef="let row">{{ row.nome }}</td>
+          <th mat-header-cell *matHeaderCellDef class="make-white">NOME</th>
+          <td mat-cell *matCellDef="let row" class="make-white">{{ row.nome }}</td>
         </ng-container>
   
         <ng-container matColumnDef="descricao">
-          <th mat-header-cell *matHeaderCellDef>DESCRIÇÃO</th>
-          <td mat-cell *matCellDef="let row">{{ row.descricao }}</td>
+          <th mat-header-cell *matHeaderCellDef class="make-white">DESCRIÇÃO</th>
+          <td mat-cell *matCellDef="let row" class="make-white">{{ row.descricao }}</td>
         </ng-container>
   
         <div class="custovalor">
           <ng-container matColumnDef="custo">
-            <th mat-header-cell *matHeaderCellDef>CUSTO</th>
-            <td mat-cell *matCellDef="let row">R$ {{ row.custo }}</td>
+            <th mat-header-cell *matHeaderCellDef class="make-white">CUSTO</th>
+            <td mat-cell *matCellDef="let row" class="make-white">R$ {{ row.custo }}</td>
           </ng-container>
   
           <ng-container matColumnDef="valor">
-            <th mat-header-cell *matHeaderCellDef>VALOR</th>
-            <td mat-cell *matCellDef="let row">R$ {{ row.valor }}</td>
+            <th mat-header-cell *matHeaderCellDef class="make-white">VALOR</th>
+            <td mat-cell *matCellDef="let row" class="make-white">R$ {{ row.valor }}</td>
           </ng-container>
         </div>
   
         <ng-container matColumnDef="acoes">
-          <th class="mat-header" mat-header-cell *matHeaderCellDef>AÇÕES</th>
+          <th class="mat-header make-white" mat-header-cell *matHeaderCellDef>AÇÕES</th>
           <td mat-cell *matCellDef="let row">
             <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-              <mat-icon>more_vert</mat-icon>
+              <mat-icon class="make-white">more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu">
               <button mat-menu-item routerLink="produtos/update/{{row.id}}">

@@ -1,0 +1,28 @@
+<div class="container">
+
+    <form>
+        <h1>LOGIN</h1>
+        <mat-form-field class="form">
+            <mat-label>Email</mat-label>
+            <input matInput [(ngModel)]="user.email" type="text" autocomplete="off" name="nome" minlength="4"
+                placeholder="example@example.com" required />
+        </mat-form-field>
+
+        <mat-form-field class="form">
+            <mat-label>Senha</mat-label>
+            <input matInput [(ngModel)]="user.senha" type="password" autocomplete="off" name="senha" required />
+        </mat-form-field>
+
+
+        <div class="buttons">
+            <button matTooltip="Logar" matTooltipPosition="below" mat-raised-button color="primary"
+                class="mat-elevation-z8 criar-categoria botao" (click)="logar()">
+                LOGIN
+            </button>
+            <button matTooltip="Cadastrar-se" matTooltipPosition="below" mat-raised-button color="warn"
+                class="mat-elevation-z8 cancelar botao">
+                REGISTRO
+            </button>
+        </div>
+    </form>
+</div>

@@ -7,22 +7,28 @@ import { Class } from 'src/app/components/snackTypes';
 import { MateriaPrima } from '../materia-prima.model';
 import { MateriaPrimaService } from '../materia-prima.service';
 var catID = '';
+var mpID = '';
 @Component({
   selector: 'app-materia-prima-read',
   templateUrl: './materia-prima-read.component.html',
   styleUrls: ['./materia-prima-read.component.css']
 })
 export class MateriaPrimaReadComponent implements OnInit {
-  displayedColumns: string[] = ['lote', 'descricao', 'entrada', 'quantidade', 'custo_un', 'custo_total', 'acoes'];
+  displayedColumns: string[] = ['lote', 'descricao', 'entrada', 'quantidade', 'custo', 'custo_total', 'acoes'];
   estoque: MateriaPrima[] = []
-  constructor(private service: MateriaPrimaService,private dialog: MatDialog, private aRoute: ActivatedRoute, private snack: MatSnackBar) { }
+  constructor(private service: MateriaPrimaService, private dialog: MatDialog, private aRoute: ActivatedRoute, private snack: MatSnackBar) { }
 
   ngOnInit(): void {
     catID = this.aRoute.snapshot.paramMap.get('id')!;
     this.find();
   }
+
+  delete(id: string) {
+    mpID = id;
+    this.openDialog('1ms', '1ms');
+  }
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(DialogClose, {
+    this.dialog.open(MateriaPrimaRemoveComponent, {
       width: '40rem',
       panelClass: "custom",
       enterAnimationDuration,
@@ -30,8 +36,13 @@ export class MateriaPrimaReadComponent implements OnInit {
     });
   }
 
-  find(){
-    this.service.readAll(catID).subscribe(res=>{
+  formatar(data: Date):String{
+    let formatada = data.toString().split('-')[2] + '/' + data.toString().split('-')[1] + '/' + data.toString().split('-')[0];
+    return formatada;
+  }
+
+  find() {
+    this.service.readAll(catID).subscribe(res => {
       this.estoque = res;
     })
   }
@@ -39,19 +50,25 @@ export class MateriaPrimaReadComponent implements OnInit {
 }
 
 
+
 @Component({
-  selector: 'estoque-delete',
-  styleUrls: ['./materia-prima-delete/materia-prima-delete.dialog.css'],
-  templateUrl: './materia-prima-delete/materia-prima-delete.dialog.html',
+  selector: 'app-materia-prima-remove',
+  templateUrl: '../materia-prima-remove/materia-prima-remove.component.html',
+  styleUrls: ['../materia-prima-remove/materia-prima-remove.component.css']
 })
-export class DialogClose {
-  constructor(private router: Router, private service: MateriaPrimaService, public dialogRef: MatDialogRef<DialogClose>, private snack: MatSnackBar) {
+export class MateriaPrimaRemoveComponent implements OnInit {
+  constructor(private router: Router, private service: MateriaPrimaService, public dialogRef: MatDialogRef<MateriaPrimaRemoveComponent>, private snack: MatSnackBar) {
 
   }
 
+  ngOnInit(): void {
+  }
+
+
+
   delete() {
-    this.service.remove(catID).subscribe((res) => {
-      mensagem('Categoria deletada com sucesso.', Class.OK, this.snack);
+    this.service.remove(mpID).subscribe((res) => {
+      mensagem('Materia prima removida com sucesso.', Class.OK, this.snack);
       this.close();
       location.reload();
     }, err => {
@@ -63,4 +80,5 @@ export class DialogClose {
   close() {
     this.dialogRef.close();
   }
+
 }

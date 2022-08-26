@@ -21,13 +21,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatSortModule } from '@angular/material/sort';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CurrencyMaskModule } from "ng2-currency-mask";
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
@@ -38,7 +38,6 @@ import { HomeComponent } from './components/views/home/home.component';
 import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component';
 import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component';
 import { CategoriaDeleteComponent } from './components/views/categoria/categoria-delete/categoria-delete.component';
-import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
 import { ProdutoReadComponent } from './components/views/produto/produto-read/produto-read.component';
 import { ProdutoCreateComponent } from './components/views/produto/produto-create/produto-create.component';
 import { ProdutoDeleteComponent } from './components/views/produto/produto-delete/produto-delete.component';
@@ -51,20 +50,18 @@ import { ProdutoPartesReadComponent } from './components/views/produto/produto-p
 import { ProdutoPartesCreateComponent } from './components/views/produto/produto-partes/produto-partes-create/produto-partes-create.component';
 import { ProdutoPartesUpdateComponent } from './components/views/produto/produto-partes/produto-partes-update/produto-partes-update.component';
 import { VendasAddComponent } from './components/views/venda/vendas-add/vendas-add.component';
-import { MateriaPrimaReadComponent } from './components/views/materia-prima/materia-prima-read/materia-prima-read.component';
+import { MateriaPrimaReadComponent, MateriaPrimaRemoveComponent } from './components/views/materia-prima/materia-prima-read/materia-prima-read.component';
 import { MateriaPrimaAddComponent } from './components/views/materia-prima/materia-prima-add/materia-prima-add.component';
 import { MateriaPrimaUpdateComponent } from './components/views/materia-prima/materia-prima-update/materia-prima-update.component';
 import { EstoqueReadComponent } from './components/views/estoque/estoque-read/estoque-read.component';
 import { EstoqueCreateComponent } from './components/views/estoque/estoque-create/estoque-create.component';
 import { EstoqueUpdateComponent } from './components/views/estoque/estoque-update/estoque-update.component';
-import { CategoriaRoutingModule } from './components/views/categoria/categoria.routing.module';
-import { MateriaPrimaRoutingModule } from './components/views/materia-prima/materiaprima.routing.module';
-import { EstoqueRoutingModule } from './components/views/estoque/estoque.routing.module';
-import { ProdutoRoutingModule } from './components/views/produto/produto.routing.module';
-import { VendasRoutingModule } from './components/views/venda/vendas.routing.module';
 import { AccountCreateComponent } from './components/views/account/account-create/account-create.component';
 import { LoginComponent } from './components/views/account/login/login.component';
 import { RecoveryComponent } from './components/views/account/recovery/recovery.component';
+import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
+import { AuthService } from './components/views/account/auth.service';
+import { DashboardComponent } from './components/views/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -74,10 +71,10 @@ import { RecoveryComponent } from './components/views/account/recovery/recovery.
     FooterComponent,
     NavComponent,
     HomeComponent,
-    CategoriaReadComponent,
     CategoriaCreateComponent,
-    CategoriaDeleteComponent,
+    CategoriaReadComponent,
     CategoriaUpdateComponent,
+    CategoriaDeleteComponent,
     ProdutoReadComponent,
     ProdutoCreateComponent,
     ProdutoDeleteComponent,
@@ -98,7 +95,9 @@ import { RecoveryComponent } from './components/views/account/recovery/recovery.
     EstoqueUpdateComponent,
     AccountCreateComponent,
     LoginComponent,
-    RecoveryComponent
+    RecoveryComponent,
+    MateriaPrimaRemoveComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -118,20 +117,15 @@ import { RecoveryComponent } from './components/views/account/recovery/recovery.
     MatSnackBarModule,
     MatDialogModule,
     MatTooltipModule,
-    MatSortModule,
     MatMenuModule,
     MatSelectModule,
     MatExpansionModule,
     MatDatepickerModule,
     MatNativeDateModule,
     CurrencyMaskModule,
-    CategoriaRoutingModule,
-    MateriaPrimaRoutingModule,
-    EstoqueRoutingModule,
-    ProdutoRoutingModule,
-    VendasRoutingModule
+    MatPaginatorModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

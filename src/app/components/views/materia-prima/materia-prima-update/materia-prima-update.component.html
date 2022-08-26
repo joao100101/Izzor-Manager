@@ -1,1 +1,47 @@
-<p>materia-prima-update works!</p>
+<form>
+    <h1>ATUALIZANDO MATERIAL</h1>
+    <mat-form-field class="form">
+        <mat-label>ID</mat-label>
+        <input matInput [(ngModel)]="material.id" type="text" autocomplete="off" name="id" readonly class='readonly'/>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Lote</mat-label>
+        <input matInput [(ngModel)]="material.lote" type="text" autocomplete="off" name="lote" minlength="4"
+            placeholder="Ex. ZBA214" required />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Descrição</mat-label>
+        <textarea matInput [(ngModel)]="material.descricao" type="text" autocomplete="off" name="descricao"
+            class="descricao" placeholder="Ex. Linha" required></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Data de entrada</mat-label>
+        <input matInput [(ngModel)]="material.entrada" type="date" name="entrada" class="descricao" required />
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Quantidade</mat-label>
+        <input matInput [(ngModel)]="material.quantidade" type="number" autocomplete="off" min=0 name="qtd"
+            placeholder="22" required />
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Preço Unitário</mat-label>
+        <input matInput currencyMask [(ngModel)]="material.custo"
+            [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', align: 'left', allowNegative: false }"
+            class="currency" name="custo" #custo autocomplete="off" required />
+        <i class="material-icons limpar" matTooltip="Limpar" (click)="clear()">backspace</i>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button matTooltip="Criar categoria" matTooltipPosition="below" mat-raised-button color="primary"
+            class="mat-elevation-z8 criar-categoria botao" (click)="update()">
+            CONFIRMAR
+        </button>
+        <button matTooltip="Voltar" matTooltipPosition="below" mat-raised-button color="warn"
+            class="mat-elevation-z8 cancelar botao" (click)="voltar()">
+            CANCELAR
+        </button>
+    </div>
+</form>
