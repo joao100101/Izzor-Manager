@@ -130,6 +130,94 @@
       "custo": 0,
       "valor": 0,
       "id": 9
+    },
+    {
+      "categoria_id": 1,
+      "variacoes": [],
+      "partes": [],
+      "categoria": "Moletons",
+      "nome": "Cropped estampado",
+      "descricao": "",
+      "custo": 0,
+      "valor": 0,
+      "id": 9
+    },
+    {
+      "categoria_id": 1,
+      "variacoes": [],
+      "partes": [],
+      "categoria": "Moletons",
+      "nome": "Cropped estampado",
+      "descricao": "",
+      "custo": 0,
+      "valor": 0,
+      "id": 9
+    },
+    {
+      "categoria_id": 1,
+      "variacoes": [],
+      "partes": [],
+      "categoria": "Moletons",
+      "nome": "Cropped estampado",
+      "descricao": "",
+      "custo": 0,
+      "valor": 0,
+      "id": 9
+    },
+    {
+      "categoria_id": 1,
+      "variacoes": [],
+      "partes": [],
+      "categoria": "Moletons",
+      "nome": "Cropped estampado",
+      "descricao": "",
+      "custo": 0,
+      "valor": 0,
+      "id": 9
+    },
+    {
+      "categoria_id": 1,
+      "variacoes": [],
+      "partes": [],
+      "categoria": "Moletons",
+      "nome": "Cropped estampado",
+      "descricao": "",
+      "custo": 0,
+      "valor": 0,
+      "id": 9
+    },
+    {
+      "categoria_id": 1,
+      "variacoes": [],
+      "partes": [],
+      "categoria": "Moletons",
+      "nome": "Cropped estampado",
+      "descricao": "",
+      "custo": 0,
+      "valor": 0,
+      "id": 9
+    },
+    {
+      "categoria_id": 1,
+      "variacoes": [],
+      "partes": [],
+      "categoria": "Moletons",
+      "nome": "Cropped estampado",
+      "descricao": "",
+      "custo": 0,
+      "valor": 0,
+      "id": 9
+    },
+    {
+      "categoria_id": 1,
+      "variacoes": [],
+      "partes": [],
+      "categoria": "Moletons",
+      "nome": "Cropped estampado",
+      "descricao": "",
+      "custo": 0,
+      "valor": 0,
+      "id": 9
     }
   ],
   "dbvendas": [
@@ -142,6 +230,14 @@
       "custo": 0,
       "valor": 0,
       "lucro": 0
+    }
+  ],
+  "contas": [
+    {
+      "id": 0,
+      "nome": "Joao",
+      "email": "31bd2a51d0b743e1b31a00290e59e7b998e35269cdd69eb870e9de266fa78461",
+      "senha": "460e3f12357f90c0830a12ee13c45e2e886ddad85e3865fd66dc63eb469f8baf"
     }
   ]
 }

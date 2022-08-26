@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Class } from './components/snackTypes';
 import { AuthService } from './components/views/account/auth.service';
@@ -8,14 +8,16 @@ import { AuthService } from './components/views/account/auth.service';
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit{
-  logado: boolean = false;
+  @Input() logado: boolean = true;
   title = 'izzor-manager';
 
 
   constructor(private auth: AuthService){}
 
   ngOnInit(): void {
-      this.logado = this.auth.isLogado();
+      this.auth.logado.subscribe(res =>{
+        this.logado = res;
+      })
   }
 
 
